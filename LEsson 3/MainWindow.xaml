@@ -1,0 +1,35 @@
+﻿<Window x:Class="LEsson_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LEsson_3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" Content="Left">
+            <Button.ToolTip>
+                <ToolTip HasDropShadow="True">
+                    <TextBlock>
+            Моя кнопка
+                    </TextBlock>
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <GridSplitter Grid.Column="1" ShowsPreview="False"
+                      Width="3" HorizontalAlignment="Center"
+                      VerticalAlignment="Stretch"/>
+        <Button Grid.Column="2" Content="Right"/>
+        <ToggleButton Grid.Column="2" Content="Повтроить"
+                      IsChecked="False" Margin="20"/>
+        <StackPanel Grid.Column="2">
+            <RadioButton Content ="Yes" Grid.Column="2"/>
+            <RadioButton Content="No"/>
+        </StackPanel>
+    </Grid>
+</Window>
